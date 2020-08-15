@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> Online Quiz </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <style type="text/css">
+    body { background: rgb(233, 232, 232) !important; } 
+ </style>
+ <script src="main.js"></script>
+ 
+
+</head>
+
+<body>
+    
+<h1>Online Quiz</h1>
+<form id="quiz" name="quiz">
+<h2> Question (1) </h2>
+<h3> What is the capital of Egypt ?</h3>
+<input id="q1" type="text" name="q1">
+<h2> Question (2) </h2>
+<h3> 1+3=  ?</h3>
+<input id="q2" type="text" name="q2">
+<h2> Question (3) </h2>
+<h3> What is color of the sun ?</h3>
+<input id="q3" type="text" name="q3">
+<h2> Question (4) </h2>
+<h3> What is the no. of months in a year ?</h3>
+<input type="radio" id="q4" name="q4" value="two">Two<br>
+<input type="radio" id="q4" name="q4" value="twelve">Twelve<br>
+<input type="radio" id="q4" name="q4" value="Ten">Ten<br>
+<h2> Question (5) </h2>
+<h3> Which One is blue?</h3>
+<input type="radio" id="q5" name="q5" value="fb">FaceBook<br>
+<input type="radio" id="q5" name="q5" value="twitter">Twitter<br>
+<input type="radio" id="q5" name="q5" value="instgram">Instgram<br>
+<h2> Question (6) </h2>
+<h3> Which one is in the shape of Circle?</h3>
+<input type="radio" id="q6" name="q6" value="pizza">Pizza<br>
+<input type="radio" id="q6" name="q6" value="pasta">Pasta<br>
+<input type="radio" id="q6" name="q6" value="Fish">Fish<br>
+
+<input id="btn" type="button" value="Done" onclick="checked();">
+
+</form>
+<div id="result">
+  <p id="grade"></p>
+</div> 
+</body>
+</html>
