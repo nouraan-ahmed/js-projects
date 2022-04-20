@@ -5,6 +5,8 @@ let tasksContainer = document.querySelector(".tasks-content");
 let noTasksMsg = document.querySelector(".no-tasks-message");
 let tasksCount = document.querySelector(".tasks-count span ");
 let tasksCompleted = document.querySelector(".tasks-completed span");
+let count=0;
+let finished=0;
 
 //focus in the input field
 window.onload = function () {
@@ -23,6 +25,7 @@ theAddButton.onclick = function () {
 
     //create span element
     let mainSpan = document.createElement("span");
+    count++;
 
     //create delete button
     let deleteElement = document.createElement("span");
@@ -56,15 +59,29 @@ theAddButton.onclick = function () {
 
     //focus on field
     theInput.focus();
+    
+    tasksCount.textContent=count;
+    tasksCompleted.textContent=finished;
   }
 };
 document.addEventListener("click", function (e) {
   //delete task
   if (e.target.className == "delete") {
+    count--;
+    if(!e.target.classList.contains('finished')){
+      finished--;
+    }
     e.target.parentNode.remove();
   }
   //finish task
   if (e.target.classList.contains("task-box")) {
     e.target.classList.toggle("finished");
+    if(e.target.classList.contains('finished')){
+    	finished++;
+    }else{
+    	finished--;
+    }
   }
+  tasksCount.textContent=count;
+    tasksCompleted.textContent=finished;
 });
